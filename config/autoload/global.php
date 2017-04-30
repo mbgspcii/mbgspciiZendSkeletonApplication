@@ -12,5 +12,20 @@
  */
 
 return array(
-    // ...
+    'application' => array(
+        'log' => array(
+            'level' => 3,
+        ),
+    ),
+    'asset_manager' => array(
+        'caching' => array(
+            'default' => array(
+                'cache' => 'AssetManager\\Cache\\FilePathCache',
+                'options' => array(
+                    'dir' => 'public',
+                ),
+            ),
+        ),
+    ),
+    'version' => '1.0.0',
 );

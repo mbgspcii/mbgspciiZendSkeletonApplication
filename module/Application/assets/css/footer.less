@@ -1,0 +1,32 @@
+@import "variables.less";
+
+footer {
+  width: 100%;
+  padding-left: 3em;
+  padding-right: 3em;
+  background-color: #505050;
+  color: #E2E2E2;
+  font-size: 12px;
+  padding-top: 3px;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+}
+
+.sticky-footer {
+  height: @footer-height;
+}
+
+footer:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+footer .left {
+  float: left;
+}
+
+footer .right {
+  float: right;
+}

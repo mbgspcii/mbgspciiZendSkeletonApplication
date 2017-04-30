@@ -9,13 +9,39 @@
 
 namespace Application\Controller;
 
+use Application\Service\ServiceProviderTrait;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
-class IndexController extends AbstractActionController
+class IndexController extends BaseController
 {
+
+    use ServiceProviderTrait;
+
     public function indexAction()
     {
-        return new ViewModel();
+
+
+        $myBaseService = $this->getBaseService();
+
+        $myBaseService->testLogger();
+
+        $params = array_merge(
+            array(
+
+            )
+        );
+
+        return new ViewModel(
+            $params
+        );
+    }
+
+    public function resetAction()
+    {
+        $myBaseService = $this->getBaseService()->resetModel();
+
+        $this->redirect()->toRoute('home');
+
     }
 }
