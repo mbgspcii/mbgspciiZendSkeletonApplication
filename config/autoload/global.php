@@ -27,5 +27,19 @@ return array(
             ),
         ),
     ),
+    'doctrine' => array(
+        'connection' => array(
+            'orm_default' => array(
+                'driverClass' => 'Doctrine\DBAL\Driver\PDOMySql\Driver',
+                'params' => array(
+                    'host' => 'override in local',
+                    'user' => 'override in local',
+                    'password' => 'override in local',
+                    'dbname' => 'zf2_skeleton',
+                    'charset' => 'utf8',
+                ),
+            )
+        ),
+    ),
     'version' => '1.0.0',
 );

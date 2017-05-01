@@ -27,10 +27,10 @@ class IndexController extends BaseController
         $myBaseService->testLogger();
 
         $params = array_merge(
-            array(
-
-            )
+            array()
         );
+
+        var_dump($this->getConfigService());
 
         return new ViewModel(
             $params

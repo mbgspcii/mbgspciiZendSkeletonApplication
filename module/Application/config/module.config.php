@@ -1,11 +1,5 @@
 <?php
-/**
- * Zend Framework (http://framework.zend.com/)
- *
- * @link      http://github.com/zendframework/ZendSkeletonApplication for the canonical source repository
- * @copyright Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
- * @license   http://framework.zend.com/license/new-bsd New BSD License
- */
+namespace Application;
 
 return array(
     'router' => include 'module.router.config.php',
@@ -14,6 +8,7 @@ return array(
     'controllers'=> include 'module.controllers.config.php',
     'form_elements' => include 'module.formelements.config.php',
     'service_manager' => include 'module.services.config.php',
+    'doctrine' => include 'module.doctrine.config.php',
     'translator' => include 'module.translator.config.php',
     'view_manager' => array(
         'display_not_found_reason' => true,
